@@ -1,5 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <cmath>
+#include <iostream>
+#include <sstream>
 
 // g++ main.cpp -o main -lsfml-graphics -lsfml-window -lsfml-system
 // x(t) = A sin(a*t + phi)
@@ -29,6 +31,21 @@ int main(){
         grafica[i].color = sf::Color::Red;
     }
 
+    // Cargar leyenda
+    sf::Font font;
+    font.loadFromFile("OpenSans.ttf");
+
+    sf::Text leyenda;
+    leyenda.setFont(font);
+    leyenda.setCharacterSize(20);
+    leyenda.setFillColor(sf::Color::White);
+    leyenda.setPosition(80, 10);
+
+    std::ostringstream oss;
+    oss << "Amp 1 = " << A << "\tAmp 2 = " << B << "\tFrec 1 = " << a << "\tFrec 2 = " << b << "\tPhase = " << phi;
+    leyenda.setString(oss.str());
+
+
     while (window.isOpen()){
         sf::Event event;
 
@@ -41,8 +58,11 @@ int main(){
         // Limpiar la ventana con un color de fondo
         window.clear(sf::Color::Black);
 
-        // Dibujar la gráfica del seno
+        // Dibujar la gráfica
         window.draw(grafica);
+
+        // Dibujar la leyenda
+        window.draw(leyenda);
 
         // Mostrar todo en la ventana
         window.display();
