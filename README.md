@@ -13,3 +13,15 @@ The meaning of the parameters is as follows:
 - **t** is the time parameter.
 
 Different combinations of parameters result in different figures. Here is an example:
+
+<div style="text-align:center">
+  <p align="center">
+  <img src="figures/figure1.png"/>
+  </p>
+</div>
+
+<div style="text-align:center">
+  <p align="center">
+  <img src="figures/figure2.png"/>
+  </p>
+</div>
