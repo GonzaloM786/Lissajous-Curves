@@ -13,11 +13,11 @@ int main(){
 
     // Constantes
     const int num_puntos = 1000;
-    const float A = 250.0f;
-    const float B = 250.0f;
-    const float a = 3.0f;
-    const float b = 2.0f;
-    const float phi = M_PI / 2;
+    const float A = 180.0f;
+    const float B = 120.0f;
+    const float a = 7.0f;
+    const float b = 9.0f;
+    const float phi = M_PI / 5;
 
     sf::VertexArray grafica(sf::LinesStrip, num_puntos);
 
